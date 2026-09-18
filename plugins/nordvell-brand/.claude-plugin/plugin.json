@@ -1,0 +1,18 @@
+{
+  "name": "nordvell-brand",
+  "displayName": "NORDVELL Brand and Content",
+  "description": "Creates and audits NORDVELL email and offer content and coordinates guarded Adobe Journey Optimizer operations.",
+  "version": "1.0.0",
+  "author": {
+    "name": "WPP Enterprise Solutions"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "nordvell",
+    "brand-guidelines",
+    "email-authoring",
+    "offer-content",
+    "ajo",
+    "mcp"
+  ]
+}
