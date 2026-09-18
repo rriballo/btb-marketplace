@@ -1,6 +1,6 @@
 # NORDVELL Brand Standard
 
-Version: 1.0. Applicable to NORDVELL email, Content Library, and Decisioning offer content. This fictional brand system was created for the Beat the Buzzer scenario. Campaign facts still require explicit approval.
+Version: 1.1. Applicable to NORDVELL email, Content Library, and Decisioning offer content. This fictional brand system was created for the Beat the Buzzer scenario. Campaign facts still require explicit approval.
 
 ## Brand Idea
 
@@ -21,9 +21,11 @@ Always write the wordmark as `NORDVELL`. Never abbreviate it to NORD. Use a text
 | Mist | `#D8DDD5` | Borders and quiet dividers |
 | Alert | `#A34132` | Errors and unavailable states only |
 
-Maintain WCAG AA contrast for normal text. Never use Lichen as body text on Cloud or Snow. Prefer large editorial photography, restrained color blocks, fine rules, and generous space over gradients, shadows, glass effects, pills, or decorative badges.
+Maintain WCAG AA contrast for normal text. Never use Lichen as body text on Cloud or Snow. NORDVELL email uses a Bright Editorial direction: confident flat blocks of Midnight, Lichen, Fjord, Cloud, and Snow alternate across the message while retaining generous space and a clear reading order. Color is structural, not decoration. Do not introduce unapproved colors, gradients, shadows, glass effects, pills, or decorative badges.
 
 Email typography is Arial, Helvetica, sans-serif. Use medium weights, tight display tracking, sentence case for headlines, and uppercase only for the wordmark and short labels. Use an 8px spacing rhythm, 0-4px corner radius, and buttons at least 44px high.
+
+Approved email combinations are Snow on Midnight, Midnight on Lichen, Snow on Fjord, Midnight on Cloud, and Midnight on Snow. Granite may be secondary text only on Cloud or Snow. Mist is a divider, not body text. Alert is reserved for genuine errors or unavailable states and is never a decorative campaign color.
 
 Photography is natural, tactile, lightly desaturated, and editorial. Avoid third-party branding, artificial grading, fake reviews, crowded collages, or imagery that conflicts with the product facts.
 

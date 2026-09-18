@@ -1,42 +1,47 @@
-# NORDVELL Creative Patterns
+# NORDVELL Bright Editorial Patterns
 
-These patterns guide composition and tone. Bracketed values are required campaign facts, not approved placeholders for an AJO write. Omit a module when its facts are unavailable instead of exposing brackets or inventing content.
+`bright-editorial-v1` is the default design. Do not ask the user to choose a visual direction unless they explicitly request a deviation. Bracketed values are non-sendable creative-draft placeholders governed by `campaign-facts-contract.md`.
 
-## Product Recovery Email
+## Color Rhythm
 
-Use a restrained editorial sequence:
+Use color in this fixed sequence:
 
-1. Midnight header with the text wordmark `NORDVELL` and ample clear space.
-2. Snow or Cloud hero with a small factual eyebrow, a two-to-seven-word headline, one short paragraph, and one primary CTA when the hero has a verified destination.
-3. Decisioning offer slot framed by whitespace and a fine Mist divider, not a loud promotional banner.
-4. Optional quiet supporting block containing only approved product or service facts.
-5. Midnight or Cloud footer with supplied legal, address, privacy, and unsubscribe details.
+```text
+Lichen header
+Fjord hero
+Cloud context
+Snow offer frame
+Lichen targeted offer OR Fjord fallback offer
+Optional alternating Fjord/Lichen support
+Cloud closing band
+Midnight footer
+```
 
-The visual rhythm should alternate space and content rather than stack many cards. Prefer one strong image, one useful outcome, and one clear action. Do not repeat the same claim in the subject, preheader, headline, and CTA.
+This creates a colorful email without gradients, decorative colors, or contrast failures. Never use Alert except for a real unavailable/error state.
 
-## Subject and Preheader
+## Product Recovery Composition
 
-Good subject directions:
+1. Open with a useful outcome, not behavior tracking.
+2. Use one hero thought and one optional hero CTA.
+3. Bridge into the dynamic treatment with one short Cloud panel.
+4. Make the colorful offer fragment the visual focal point.
+5. Add no more than one supporting block, and only from approved facts.
+6. End with a quiet closing band when it adds a distinct action.
+7. Use the fixed Midnight footer.
+
+The email must look complete with no image. Approved photography enhances the hero or offer but never carries critical information.
+
+## Copy Directions
+
+Subject directions, when supported:
 
 - `Another option in your size`
 - `An update on the [approved product name]`
 - `We’ll keep watch for [approved size or product]`
 
-Use these only when their facts are supported. A preheader should add the verified action, such as a same-size alternative or notification path, rather than paraphrase the subject.
+Avoid `You left this behind`, `Your exclusive pick`, `Last chance`, or any phrasing that exposes surveillance or unsupported urgency.
 
-Avoid subjects that imply surveillance or unsupported urgency, such as `You left this behind`, `Your exclusive pick`, or `Last chance`.
-
-## Targeted Alternative Module
-
-Recommended hierarchy:
-
-- Eyebrow: `AVAILABLE IN YOUR SIZE` only with current evidence.
-- Headline: useful option, not targeting logic.
-- Body: one sentence stating the exact relationship and size fact.
-- Product line: approved name, optional approved price.
-- CTA: `Explore [product]` with an approved destination.
-
-Example structure, not approved campaign copy:
+Targeted alternative hierarchy:
 
 ```text
 AVAILABLE IN YOUR SIZE
@@ -45,18 +50,9 @@ The [alternative product] is available in [size], the size you viewed.
 Explore [alternative product]
 ```
 
-Do not assert matching fit, features, materials, weather performance, delivery, or price unless separately supplied.
+This is structure, not approved campaign copy. Do not assert matching fit, features, materials, performance, delivery, or price without evidence.
 
-## Notify-Only Fallback Module
-
-Recommended hierarchy:
-
-- Eyebrow: `SIZE UPDATE`
-- Headline: acknowledgement without a replenishment promise.
-- Body: state that no confirmed option is available and offer notification.
-- CTA: `Keep me notified` only with an approved preference destination or action.
-
-Example structure, not approved campaign copy:
+Notify-only fallback hierarchy:
 
 ```text
 SIZE UPDATE
@@ -65,13 +61,21 @@ There is no confirmed update for [product] in [size] yet. Choose notification an
 Keep me notified
 ```
 
-If notification behavior or its destination is not confirmed, omit the CTA and mark the treatment unresolved.
+Use the CTA only when notification behavior and its destination are approved.
 
-## HTML Treatment
+## Responsive Rules
 
-- Use Midnight for the header and primary CTA, Cloud for breathing room, Snow for the principal content surface, Mist for dividers, and Lichen only as a controlled accent against Midnight or behind Midnight text.
-- Keep headings left aligned unless the supplied hero asset and composition justify a centered hero.
-- Use 32-40px desktop headline size and 28-32px mobile size where practical; body copy generally 16-18px with comfortable line height.
-- Use 24-40px internal module spacing and at least 16px mobile gutters.
-- Use nearly square image crops, no decorative radius beyond 4px, no drop shadows, and no dense grid of repetitive cards.
-- Ensure the offer fragment looks native inside the email shell by sharing type, spacing, color, and CTA treatment.
+- Outer canvas: Cloud, 100% width. Main presentation table: 600px maximum.
+- Desktop gutters: 40px; hero vertical padding: 48px; normal module vertical padding: 40px.
+- Mobile breakpoint: 620px. Mobile gutters: 24px; module vertical padding: 32-36px.
+- Stack split cells at 100% width on mobile. Images become fluid with explicit source dimensions where known.
+- Headline: 38/42px desktop and 30/34px mobile. Offer headline: 30/34px desktop and 26/30px mobile.
+- Body: 16-17px with 24-26px line height. Footer: 12-13px with 18-20px line height.
+- CTAs: at least 44px high, direct verb-first labels, 16px 24px padding, 0-4px radius.
+- Do not create dense card grids, centered walls of text, or repeated CTA buttons.
+
+## Draft-First Rule
+
+Generate the entire visual draft on the first pass. Do not ask about logo treatment, colors, typography, layout, module order, CTA styling, image crop, or footer styling. Use the fixed defaults.
+
+If activation facts are missing, use only approved non-sendable placeholders, list them once, and continue the creative preview. Before an AJO write, ask one consolidated activation question and regenerate without placeholders.

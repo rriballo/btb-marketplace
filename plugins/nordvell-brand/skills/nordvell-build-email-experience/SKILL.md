@@ -9,20 +9,22 @@ Follow all references in this plugin, especially `../../references/write-safety-
 
 ## Required Outcome
 
-Turn a concise request into a reviewed creative and technical package without forcing the user to specify every AJO resource. Ask focused questions only when missing facts block truthful content, eligibility, a destination, required footer/legal content, or a safe operation.
+Turn a concise request into a reviewed creative and technical package without forcing the user to specify every AJO resource or design choice. Produce the full `creative-draft` first. Do not ask questions before the visual draft unless the request is too ambiguous to identify the brand, channel, or objective. Before a requested AJO write, ask one consolidated activation question for all unresolved facts.
 
 ## Preflight
 
 1. Call `ajo_get_capabilities`; record available reads and write gates. A disabled write gate does not prevent drafting.
-2. Invoke `nordvell-brand-guidelines` and normalize campaign facts and evidence.
+2. Invoke `nordvell-brand-guidelines`, normalize campaign facts/evidence, and fix the design system to `bright-editorial-v1`.
 3. If an audience is supplied, list and exact-get its system record. Audience definition or publication does not prove nonzero qualification or eligibility for a specific profile.
 4. Invoke `nordvell-author-offer-content` for at least one targeted package and one universally truthful fallback package when Decisioning is requested.
 5. Invoke `nordvell-author-email` for the static shell. Use `<!-- offer -->` while the Decision Policy is pending.
-6. Return a combined preview and operation manifest before any mutation. Plan or content approval does not authorize writes.
+6. Return a combined complete HTML/text/fragment preview, unresolved activation checklist, and operation manifest before any mutation. Design defaults and draft placeholders must prevent a multi-question interview. Plan or content approval does not authorize writes.
 
 ## Build Sequence
 
 For every mutation, present its exact payload and obtain a fresh approval.
+
+Before step 1, if any draft placeholder or unresolved activation fact remains, ask one grouped question, regenerate all affected content in `ajo-ready` mode, and re-audit it. Do not ask one question per field. Do not mutate any resource while a placeholder remains.
 
 1. Create and separately publish the reviewed targeted and fallback HTML expression fragments. Verify their live content.
 2. Resolve the Decisioning catalog and inventory existing resources. Reuse only after semantic comparison.

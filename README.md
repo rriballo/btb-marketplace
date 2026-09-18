@@ -4,6 +4,8 @@ Standalone marketplace for NORDVELL brand governance and Adobe Journey Optimizer
 
 The plugin turns a short request such as "build NORDVELL content for the Aurora M/L view-without-add audience" into an evidence-backed content package, a polished responsive email, targeted and fallback offer fragments, and an approval-gated AJO build plan. It does not invent campaign facts or silently mutate Adobe resources.
 
+Version 1.1 adds the fixed colorful `bright-editorial-v1` email scaffold and draft-first authoring. Coworker generates the complete visual preview without a design interview, then asks once for unresolved activation facts before an AJO write.
+
 ## Configuration
 
 Provide the deployed `my-mcp-server` connection through the Coworker host environment:
