@@ -4,6 +4,10 @@ This plugin gives CX Coworker one canonical NORDVELL brand system and focused sk
 
 Shared references define the exact email and offer output contracts plus reusable premium editorial composition patterns, so authoring returns complete source rather than a wireframe or generic marketing outline.
 
+The Aurora Parka recorded-demo package is fixed in `references/aurora-recovery-content.md`. It aligns the shared no-discount email with preferred-size Fjell Parka, verified store-pickup, and notify-only fallback treatments, including the four named demo-profile outcomes.
+
+Reviewable creative-draft source is under `examples/`: one complete responsive email and three modular offer fragments. These files intentionally contain non-sendable activation placeholders and must not be copied into AJO unchanged.
+
 The default is `bright-editorial-v1`: Lichen header, Fjord hero, Cloud body context, colorful targeted/fallback offer, optional alternating support block, and Midnight footer. Coworker does not ask the user to design these sections.
 
 Authoring starts in `creative-draft` mode. Coworker immediately returns complete HTML, plain text, and offer fragments using conspicuous non-sendable placeholders for missing URLs, assets, address, privacy, unsubscribe, or legal details. When the user asks to save, Coworker asks one consolidated activation question, regenerates in `ajo-ready` mode with zero placeholders, and only then begins separately approved Adobe operations.

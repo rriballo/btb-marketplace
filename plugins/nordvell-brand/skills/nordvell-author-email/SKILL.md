@@ -5,7 +5,7 @@ description: Write a polished, complete NORDVELL email package for Adobe Journey
 
 # Author a NORDVELL Email
 
-Follow `../../references/nordvell-brand-standard.md`, `../../references/nordvell-email-standard.md`, `../../references/nordvell-email-scaffold.md`, `../../references/nordvell-creative-patterns.md`, `../../references/campaign-facts-contract.md`, `../../references/write-safety-and-recovery.md`, and `../../references/operation-receipt.md`.
+Follow `../../references/nordvell-brand-standard.md`, `../../references/nordvell-email-standard.md`, `../../references/nordvell-email-scaffold.md`, `../../references/nordvell-creative-patterns.md`, `../../references/campaign-facts-contract.md`, `../../references/write-safety-and-recovery.md`, and `../../references/operation-receipt.md`. For the Aurora Parka recorded demo, also follow `../../references/aurora-recovery-content.md`; its no-discount narrative and module copy take precedence over generic creative patterns.
 
 ## Creative Workflow
 
@@ -19,6 +19,7 @@ Follow `../../references/nordvell-brand-standard.md`, `../../references/nordvell
 8. Use exactly one `<!-- offer -->` marker at the intended position when the policy is pending. When a real bound policy exists, omit the marker and record the complete real policy tuple; never hand-write its loop.
 9. Validate source, mobile behavior, images-disabled behavior, contrast, alt text, links, CTA, footer, placeholders, and brand voice.
 10. Present the rendered content summary, complete source package, approved facts used, unresolved facts, one consolidated activation checklist, and `readyToWrite`. Content review does not authorize a write.
+11. For the Aurora recovery demo, preserve the single Decisioning slot and its three-treatment hierarchy. Do not place a static Fjell recommendation in the shared shell because fallback recipients must not receive an unsupported targeted claim.
 
 ## Optional AJO Write
 

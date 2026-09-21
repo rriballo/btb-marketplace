@@ -45,7 +45,7 @@ Return one package per treatment:
 
 Use `alternativeProduct: null` for notify-only fallback. `readyToCreate` requires a valid destination when the fragment contains a CTA, complete customer-facing facts, and source QA. It is not mutation approval.
 
-Creative-draft packages may use approved URL, image, price, or date placeholders from the campaign facts contract and must set `readyToCreate: false`. They may not use placeholders for stock, eligibility, product relationships, or size claims. Before fragment creation, ask one consolidated question for all unresolved activation facts across every treatment and regenerate in `ajo-ready` mode.
+Creative-draft packages may use approved URL, image, price, date, store-name, pickup, or preference-center placeholders from the campaign facts contract and must set `readyToCreate: false`. They may not use placeholders for stock, eligibility, product relationships, or size claims. Before fragment creation, ask one consolidated question for all unresolved activation facts across every treatment and regenerate in `ajo-ready` mode.
 
 ## Fragment Format
 
