@@ -1,6 +1,6 @@
 # NORDVELL Bright Editorial Email Scaffold
 
-Use this source structure for `bright-editorial-v1`. Tokens containing `APPROVED ... COPY`, `APPROVED EYEBROW`, `APPROVED HEADLINE`, or `APPROVED CTA LABEL` are authoring instructions and must be replaced with generated, evidence-safe copy even in creative-draft mode. The `_REQUIRED` activation placeholders shown below are permitted only in creative-draft mode. Do not submit this reference verbatim or leave any placeholder in `ajo-ready` mode.
+Use this source structure for `bright-editorial-v1`. Tokens containing `APPROVED ... COPY`, `APPROVED EYEBROW`, `APPROVED HEADLINE`, or `APPROVED CTA LABEL` are authoring instructions and must be replaced with generated, evidence-safe copy even in creative-draft mode. The `_REQUIRED` activation placeholders shown below are permitted in `creative-draft` and explicit `poc-draft-write` modes. Do not submit this reference verbatim or leave any placeholder in `ajo-ready` mode.
 
 Optional approved image rows and one supporting block may be inserted according to `nordvell-email-standard.md`. Preserve the module IDs, top-level order, color pairings, offer position, table layout, and mobile behavior.
 
@@ -85,4 +85,4 @@ When the hero has an approved destination, add one CTA after its paragraph using
 <a href="[APPROVED_PRODUCT_URL_REQUIRED]" style="display:inline-block;margin-top:24px;padding:14px 24px;min-height:44px;box-sizing:border-box;background:#BFD76D;color:#101714;font-size:14px;line-height:18px;font-weight:700;text-decoration:none;border-radius:2px;">[APPROVED CTA LABEL]</a>
 ```
 
-Omit the CTA when its destination is unresolved unless the complete layout specifically needs a creative-draft preview; in that case use the approved URL placeholder and keep `readyToWrite: false`.
+Omit the CTA when its destination is unresolved unless the complete layout specifically needs a creative-draft or POC draft-write rendering; in that case use the approved URL placeholder and keep `readyToWrite: false` and `productionReady: false`.

@@ -18,7 +18,7 @@ Creative directions that do not assert external facts, such as hierarchy or a he
 
 Missing, stale, contradictory, or unapproved facts.
 
-In `creative-draft` mode, use only these conspicuous non-sendable placeholder forms when the value is necessary to show the complete design:
+In `creative-draft` or explicitly requested `poc-draft-write` mode, use only these conspicuous placeholder forms when the value is necessary to show or store the complete design:
 
 - `[APPROVED_PRODUCT_URL_REQUIRED]`
 - `[APPROVED_IMAGE_URL_REQUIRED]`
@@ -32,8 +32,23 @@ In `creative-draft` mode, use only these conspicuous non-sendable placeholder fo
 - `[APPROVED_PICKUP_URL_REQUIRED]`
 - `[APPROVED_PREFERENCE_URL_REQUIRED]`
 
-Do not ask permission for each placeholder. Record all placeholders in `unresolvedFacts`, set readiness false, and label the package `creative-draft`. Never use a placeholder to fabricate stock, eligibility, a product relationship, product performance, or consent. If those facts are absent, choose a truthful generic or notify-only treatment instead.
+Do not ask permission for each placeholder. Record all placeholders in `unresolvedFacts`. In `creative-draft`, set readiness false. In `poc-draft-write`, set `pocDraft: true`, `productionReady: false`, and `readyToCreateDraft: true` only after source QA. Never represent a placeholder as verified fact.
 
-Before any AJO mutation, switch to `ajo-ready` mode. Ask one consolidated activation question containing every unresolved fact, then regenerate and re-audit the complete source. No approved AJO payload may contain square-bracket placeholders, `href="#"`, fake UUIDs, fake asset URLs, or sample legal details.
+## POC Draft-Write Exception
+
+`poc-draft-write` is permitted only when the user explicitly requests creation or update of placeholder-bearing content for a controlled proof of concept. It permits placeholders in draft AJO Content Templates and draft HTML expression fragments. It does not make the content sendable or production-ready.
+
+In this mode:
+
+- Prefix or suffix deterministic resource names with `POC` or `poc-draft`.
+- Show the exact placeholder-bearing payload and unresolved-fact manifest before the write.
+- Obtain the normal fresh exact approval for each create or update.
+- Keep the resource in draft. Do not publish a fragment, approve an item, bind a policy, apply the template to a live message, activate a campaign or Journey, send a proof, or send a message.
+- Do not use fake UUIDs or claim that placeholders are real URLs, assets, legal terms, consent, stock, eligibility, or delivery evidence.
+- The user may explicitly approve scenario assumptions such as Fjell Parka demo availability for this POC. Record them as `pocScenarioAssumptions`, not tool-verified or production facts.
+- Missing stock, eligibility, relationship, product-performance, pickup, or consent facts may be represented only as clearly labeled POC scenario assumptions or omitted from the copy. Do not silently infer them.
+- Every operation receipt must state `POC DRAFT - NOT FOR SEND` and list all placeholders and assumptions.
+
+For production-capable writes, switch to `ajo-ready`, ask one consolidated activation question, regenerate, and re-audit. An `ajo-ready` payload may not contain square-bracket placeholders, `href="#"`, fake UUIDs, fake asset URLs, or sample legal details.
 
 Never call view-without-add behavior `abandonment` unless the data supports session sequencing. Use the approved audience name or `view-without-add audience` when that is the actual evidence.

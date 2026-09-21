@@ -6,11 +6,11 @@ Shared references define the exact email and offer output contracts plus reusabl
 
 The Aurora Parka recorded-demo package is fixed in `references/aurora-recovery-content.md`. It aligns the shared no-discount email with preferred-size Fjell Parka, verified store-pickup, and notify-only fallback treatments, including the four named demo-profile outcomes.
 
-Reviewable creative-draft source is under `examples/`: one complete responsive email and three modular offer fragments. These files intentionally contain non-sendable activation placeholders and must not be copied into AJO unchanged.
+Reviewable creative-draft source is under `examples/`: one complete responsive email and three modular offer fragments. These files contain conspicuous activation placeholders. They may be stored only through explicit `poc-draft-write` as draft resources labeled `POC DRAFT - NOT FOR SEND`.
 
 The default is `bright-editorial-v1`: Lichen header, Fjord hero, Cloud body context, colorful targeted/fallback offer, optional alternating support block, and Midnight footer. Coworker does not ask the user to design these sections.
 
-Authoring starts in `creative-draft` mode. Coworker immediately returns complete HTML, plain text, and offer fragments using conspicuous non-sendable placeholders for missing URLs, assets, address, privacy, unsubscribe, or legal details. When the user asks to save, Coworker asks one consolidated activation question, regenerates in `ajo-ready` mode with zero placeholders, and only then begins separately approved Adobe operations.
+Authoring starts in `creative-draft` mode. Coworker immediately returns complete HTML, plain text, and offer fragments using conspicuous placeholders for missing URLs, assets, address, privacy, unsubscribe, or legal details. For a POC, an explicit `poc-draft-write` request permits separately approved creation/update of those placeholder-bearing draft templates and expression fragments. They remain non-production, unpublished, unbound, inactive, and unsent. Production writes still require `ajo-ready` content with zero placeholders.
 
 ## Skills
 
@@ -31,6 +31,8 @@ Draft everything first and do not write to AJO until I approve each payload.
 
 Coworker first identifies missing evidence. When sufficient facts exist, it returns a complete preview package before requesting any mutation approval.
 
+For the recorded Aurora demo, use `COWORKER-AURORA-PROMPT.md` from the repository root. It selects `poc-draft-write`, asks for all four complete payloads, and permits draft AJO creation after exact approval without requiring placeholder replacement first.
+
 ## Fixed Environment
 
 Adobe operations target only sandbox `aepenablementfy21`. A different sandbox is a stop condition.
@@ -41,6 +43,7 @@ The MCP connection is configured by `AJO_MCP_URL`, `ADOBE_IMS_TOKEN`, and `ADOBE
 
 - Stock, alternatives, prices, destinations, dates, product capabilities, assets, consent, and legal text must be supplied or evidenced. The current MCP does not provide inventory verification.
 - A content draft is not an AJO mutation approval.
+- `poc-draft-write` permits only placeholder-bearing draft Content Templates and HTML expression fragments labeled `POC DRAFT - NOT FOR SEND`.
 - Every create, update, publication, attachment, lifecycle change, policy creation, placement binding, and template save requires a fresh exact approval.
 - The MCP does not create or activate Journeys or campaigns. Those remain explicit AJO UI steps.
 - Source QA and preview do not prove audience qualification, proof delivery, activation, or business impact.

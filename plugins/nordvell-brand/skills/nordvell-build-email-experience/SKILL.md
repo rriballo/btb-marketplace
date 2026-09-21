@@ -9,7 +9,7 @@ Follow all references in this plugin, especially `../../references/write-safety-
 
 ## Required Outcome
 
-Turn a concise request into a reviewed creative and technical package without forcing the user to specify every AJO resource or design choice. Produce the full `creative-draft` first. Do not ask questions before the visual draft unless the request is too ambiguous to identify the brand, channel, or objective. Before a requested AJO write, ask one consolidated activation question for all unresolved facts.
+Turn a concise request into a reviewed creative and technical package without forcing the user to specify every AJO resource or design choice. Produce the full `creative-draft` first. Do not ask questions before the visual draft unless the request is too ambiguous to identify the brand, channel, or objective. Before a production write, ask one consolidated activation question for all unresolved facts. If the user explicitly requests `poc-draft-write`, allow separately approved creation/update of placeholder-bearing draft content resources without that activation interview.
 
 ## Preflight
 
@@ -24,9 +24,12 @@ Turn a concise request into a reviewed creative and technical package without fo
 
 For every mutation, present its exact payload and obtain a fresh approval.
 
-Before step 1, if any draft placeholder or unresolved activation fact remains, ask one grouped question, regenerate all affected content in `ajo-ready` mode, and re-audit it. Do not ask one question per field. Do not mutate any resource while a placeholder remains.
+Before step 1, choose the path:
 
-1. Create and separately publish the reviewed targeted and fallback HTML expression fragments. Verify their live content.
+- Production path: if any placeholder or unresolved activation fact remains, ask one grouped question, regenerate in `ajo-ready`, and do not mutate while a placeholder remains.
+- `poc-draft-write` path: show the exact placeholder-bearing email and fragment payloads, their unresolved manifests and scenario assumptions, then obtain fresh exact approval for each draft create/update. Complete only content-template and expression-fragment draft operations, re-read them, issue the POC receipt, and stop before publication or step 2.
+
+1. Create and separately publish the reviewed targeted and fallback HTML expression fragments. Verify their live content. In `poc-draft-write`, create draft fragments only and stop; publication is prohibited.
 2. Resolve the Decisioning catalog and inventory existing resources. Reuse only after semantic comparison.
 3. Create or verify the eligibility rule from supported Profile fields or an exact audience system ID. Never use an audience display name as a system identifier or copy generated PQL blindly.
 4. Create draft targeted and fallback items with truthful dates, priority, eligibility, and metadata. Attach each published fragment under the same stable `referenceKey`. Fresh-get items and ETags immediately before every attachment or lifecycle change.

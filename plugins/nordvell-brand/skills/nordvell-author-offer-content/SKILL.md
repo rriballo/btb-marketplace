@@ -16,19 +16,22 @@ Follow `../../references/nordvell-brand-standard.md`, `../../references/nordvell
 5. For fallback, remove every dependency on targeted eligibility. Promise only acknowledgement or notification when no recovery option is verified.
 6. Write concise headline, body, and CTA options. Select and explain the strongest brand-aligned option without fabricating a benefit.
 7. Return one complete `NORDVELL_OFFER_FRAGMENT` package per viable treatment exactly as defined in the offer contract. The `expression` must be usable colorful HTML fragment source, not an entire email.
-8. Use approved non-sendable placeholders for missing destination, image, price, or date details; list them without interrupting the creative preview. Validate accessibility, mobile width, role separation, unsupported claims, and unresolved facts. Set `readyToCreate` independently.
+   Print each authored `expression` in full. Never substitute a plan, file reference, content outline, AJO configuration summary, or instructions for the fragment HTML.
+8. Use approved placeholders for missing destination, image, price, or date details; list them without interrupting the creative preview. They remain non-sendable even when stored through `poc-draft-write`. Validate accessibility, mobile width, role separation, unsupported claims, and unresolved facts. Set `readyToCreateDraft` and production `readyToCreate` independently.
 9. For Aurora recovery, author three distinct items: preferred-size Fjell, higher-priority verified Fjell store pickup, and notify-only fallback. Treat `{preferredSize}` and `{storeName}` in the campaign reference as semantic tokens; resolve them through AJO's personalization picker or approved static items and never publish the braces literally.
 
 ## Optional Fragment Operations
 
 Only after the exact package is reviewed and the user explicitly requests the operation:
 
-1. Ask one consolidated activation question for unresolved facts across all treatments, regenerate them in `ajo-ready` mode, and require zero placeholders.
+1. Select the write mode. For normal creation/update, ask one consolidated activation question, regenerate in `ajo-ready`, and require zero placeholders. If the user explicitly requests `poc-draft-write`, preserve allowed placeholders, set `pocDraft: true`, `productionReady: false`, `readyToCreateDraft: true`, and label every fragment `POC DRAFT - NOT FOR SEND`.
 2. Call `ajo_get_capabilities`; require sandbox `aepenablementfy21` and enabled Content writes.
 3. List and read potential fragment matches. Compare exact ID, subtype, lifecycle, draft/live expression, and differences; never reuse by name alone.
 4. Create only an expression fragment with `subType: HTML`. Show the exact payload and obtain fresh approval with `create expression-fragment <name>` before calling `ajo_content_create_expression_fragment`.
 5. For updates, fresh-get the fragment and ETag, show the full replacement expression and diff, obtain approval with `update <fragmentId>`, update, and re-read.
-6. Publication is a separate lifecycle mutation. Fresh-get, show exact ID/ETag/content and impact, obtain approval with `publish <fragmentId>`, publish once, and poll bounded status until complete, failed, or pending.
+6. Publication is a separate lifecycle mutation. It is prohibited for `poc-draft-write` resources while any placeholder or POC-only assumption remains. For `ajo-ready` content, fresh-get, show exact ID/ETag/content and impact, obtain approval with `publish <fragmentId>`, publish once, and poll bounded status until complete, failed, or pending.
 7. Verify the live fragment after successful publication. Attaching it to an item is another separately approved operation through the coordinated build skill or the relevant MCP tools.
 
 Never carry approval from creation to publication or attachment. Never claim that a published fragment is selected, bound, rendered, sent, or delivered.
+
+In `poc-draft-write`, creation or update of draft HTML expression fragments is allowed with the approved placeholder manifest. Do not publish, attach to an item, approve an item, bind a policy, activate, proof, or send. The receipt must list every placeholder and POC scenario assumption.

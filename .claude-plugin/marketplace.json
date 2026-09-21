@@ -4,14 +4,14 @@
     "name": "WPP Enterprise Solutions"
   },
   "description": "NORDVELL brand and Adobe Journey Optimizer content skills for CX Coworker.",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "plugins": [
     {
       "name": "nordvell-brand",
       "displayName": "NORDVELL Brand and Content",
       "source": "./plugins/nordvell-brand",
       "description": "Creates and audits truthful NORDVELL email and offer content, with guarded Adobe Journey Optimizer operations through MCP.",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "author": {
         "name": "WPP Enterprise Solutions"
       },
