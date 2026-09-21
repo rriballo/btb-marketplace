@@ -4,4 +4,4 @@ Before the first mutation record the fixed sandbox, objective, approved facts, a
 
 Use states `planned`, `approved`, `completed`, `blocked`, `outcome-unknown`, and `external-action-required`.
 
-The final receipt lists each operation, resource name/type/ID, environment, before/after lifecycle and ETag, references, asynchronous status, verification evidence, warnings, unresolved outcomes, and next action. Include semantically reused resources. For `poc-draft-write`, include `POC DRAFT - NOT FOR SEND`, every remaining placeholder, every POC scenario assumption, and the production remediation required. Never represent acceptance, queued publication, preview, or UI application as delivery.
+The final receipt lists each operation, resource name/type/ID, environment, before/after lifecycle and ETag, references, asynchronous status, verification evidence, warnings, unresolved outcomes, and next action. Include semantically reused resources. Never represent acceptance, queued publication, preview, or UI application as delivery.

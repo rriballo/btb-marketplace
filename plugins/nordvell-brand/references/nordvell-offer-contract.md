@@ -23,7 +23,7 @@ Return one package per treatment:
 ```json
 {
   "contentType": "NORDVELL_OFFER_FRAGMENT",
-  "mode": "creative-draft | poc-draft-write | ajo-ready",
+  "mode": "creative-draft | ajo-ready",
   "designSystem": "bright-editorial-v1",
   "internalRole": "TARGETED_BACK_IN_STOCK",
   "name": "stable AJO fragment name",
@@ -39,16 +39,13 @@ Return one package per treatment:
   "evidence": [],
   "unresolvedFacts": [],
   "approvalsRequired": [],
-  "pocDraft": false,
-  "productionReady": false,
-  "readyToCreateDraft": false,
   "readyToCreate": false
 }
 ```
 
-Use `alternativeProduct: null` for notify-only fallback. `readyToCreate` means production-capable and requires a valid destination when the fragment contains a CTA, complete customer-facing facts, and source QA. `readyToCreateDraft` may be true for a placeholder-bearing `poc-draft-write` fragment while `readyToCreate` and `productionReady` remain false. Neither is mutation approval.
+Use `alternativeProduct: null` for notify-only fallback. `readyToCreate` requires a valid destination when the fragment contains a CTA, complete customer-facing facts, and source QA. It is not mutation approval.
 
-Creative-draft packages may use approved URL, image, price, date, store-name, pickup, or preference-center placeholders from the campaign facts contract and must set `readyToCreate: false`. In explicitly requested `poc-draft-write`, those packages may be written to AJO as draft expression fragments after exact approval. Name and describe each resource as `POC DRAFT - NOT FOR SEND`, set `pocDraft: true`, and preserve the unresolved manifest. Stock, eligibility, product relationships, size, pickup, performance, or consent may be used only when supplied as explicit POC scenario assumptions or verified evidence; otherwise omit the assertion. Publication remains blocked until regeneration in `ajo-ready` with zero placeholders.
+Creative-draft packages may use approved URL, image, price, date, store-name, pickup, or preference-center placeholders from the campaign facts contract and must set `readyToCreate: false`. They may not use placeholders for stock, eligibility, product relationships, or size claims. Before fragment creation, ask one consolidated question for all unresolved activation facts across every treatment and regenerate in `ajo-ready` mode.
 
 ## Fragment Format
 

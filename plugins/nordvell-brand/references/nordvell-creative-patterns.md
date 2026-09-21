@@ -1,6 +1,6 @@
 # NORDVELL Bright Editorial Patterns
 
-`bright-editorial-v1` is the default design. Do not ask the user to choose a visual direction unless they explicitly request a deviation. Bracketed values are creative placeholders governed by `campaign-facts-contract.md`; they may be stored only in an explicitly requested `poc-draft-write` resource labeled `POC DRAFT - NOT FOR SEND`.
+`bright-editorial-v1` is the default design. Do not ask the user to choose a visual direction unless they explicitly request a deviation. Bracketed values are non-sendable creative-draft placeholders governed by `campaign-facts-contract.md`.
 
 ## Color Rhythm
 
@@ -78,4 +78,4 @@ Use the CTA only when notification behavior and its destination are approved.
 
 Generate the entire visual draft on the first pass. Do not ask about logo treatment, colors, typography, layout, module order, CTA styling, image crop, or footer styling. Use the fixed defaults.
 
-If activation facts are missing, use only approved placeholders, list them once, and continue the creative preview. Before a production AJO write, ask one consolidated activation question and regenerate without placeholders. For explicit `poc-draft-write`, retain the manifest and allow only draft content creation/update.
+If activation facts are missing, use only approved non-sendable placeholders, list them once, and continue the creative preview. Before an AJO write, ask one consolidated activation question and regenerate without placeholders.

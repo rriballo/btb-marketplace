@@ -7,7 +7,7 @@ Every email-authoring response must return these labeled fields:
 ```json
 {
   "contentType": "NORDVELL_EMAIL_PACKAGE",
-  "mode": "creative-draft | poc-draft-write | ajo-ready",
+  "mode": "creative-draft | ajo-ready",
   "designSystem": "bright-editorial-v1",
   "locale": "approved locale",
   "audienceContext": "non-customer-facing summary",
@@ -27,18 +27,13 @@ Every email-authoring response must return these labeled fields:
   "approvedFactsUsed": [],
   "unresolvedFacts": [],
   "approvalsRequired": [],
-  "pocDraft": false,
-  "productionReady": false,
-  "readyToCreateDraft": false,
   "readyToWrite": false
 }
 ```
 
-`readyToWrite` means production-capable and is true only when all customer-facing facts, destinations, assets, required footer details, and the intended offer-slot mode are resolved and the complete source passes QA. `readyToCreateDraft` may be true in `poc-draft-write` while `readyToWrite` and `productionReady` remain false. Neither field means the user approved a mutation.
+`readyToWrite` is true only when all customer-facing facts, destinations, assets, required footer details, and the intended offer-slot mode are resolved and the complete source passes QA. It does not mean the user approved a mutation.
 
 Default to `creative-draft` unless the user explicitly requests an AJO write and all activation facts are resolved. Creative draft mode must still return complete HTML and plain text. It may contain only the approved non-sendable placeholders in the campaign facts contract and must set `readyToWrite: false`.
-
-When the user explicitly requests `poc-draft-write`, the same reviewed HTML may be created or updated as a draft AJO Content Template with approved POC placeholders. Set `pocDraft: true`, `productionReady: false`, `readyToCreateDraft: true`, and `readyToWrite: false`. The template name and description must identify it as `POC DRAFT - NOT FOR SEND`. This exception does not permit applying the template to a live message, proofing, activation, or sending.
 
 ## Fixed Bright Editorial Format
 
