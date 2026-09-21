@@ -5,7 +5,7 @@ description: Write truthful NORDVELL targeted and fallback offer content as AJO-
 
 # Author NORDVELL Offer Content
 
-Follow `../../references/nordvell-brand-standard.md`, `../../references/nordvell-offer-contract.md`, `../../references/nordvell-creative-patterns.md`, `../../references/campaign-facts-contract.md`, `../../references/write-safety-and-recovery.md`, and `../../references/operation-receipt.md`. For the Aurora Parka recorded demo, also follow `../../references/aurora-recovery-content.md`; use its stable names, Fjell Parka relationship, treatment priority, and no-discount copy.
+Follow `../../references/nordvell-brand-standard.md`, `../../references/nordvell-offer-contract.md`, `../../references/nordvell-creative-patterns.md`, `../../references/campaign-facts-contract.md`, `../../references/write-safety-and-recovery.md`, and `../../references/operation-receipt.md`.
 
 ## Authoring
 
@@ -17,7 +17,6 @@ Follow `../../references/nordvell-brand-standard.md`, `../../references/nordvell
 6. Write concise headline, body, and CTA options. Select and explain the strongest brand-aligned option without fabricating a benefit.
 7. Return one complete `NORDVELL_OFFER_FRAGMENT` package per viable treatment exactly as defined in the offer contract. The `expression` must be usable colorful HTML fragment source, not an entire email.
 8. Use approved non-sendable placeholders for missing destination, image, price, or date details; list them without interrupting the creative preview. Validate accessibility, mobile width, role separation, unsupported claims, and unresolved facts. Set `readyToCreate` independently.
-9. For Aurora recovery, author three distinct items: preferred-size Fjell, higher-priority verified Fjell store pickup, and notify-only fallback. Treat `{preferredSize}` and `{storeName}` in the campaign reference as semantic tokens; resolve them through AJO's personalization picker or approved static items and never publish the braces literally.
 
 ## Optional Fragment Operations
 

@@ -28,9 +28,6 @@ In `creative-draft` mode, use only these conspicuous non-sendable placeholder fo
 - `[LEGAL_TEXT_REQUIRED]`
 - `[APPROVED_PRICE_REQUIRED]`
 - `[APPROVED_DATE_REQUIRED]`
-- `[APPROVED_STORE_NAME_REQUIRED]`
-- `[APPROVED_PICKUP_URL_REQUIRED]`
-- `[APPROVED_PREFERENCE_URL_REQUIRED]`
 
 Do not ask permission for each placeholder. Record all placeholders in `unresolvedFacts`, set readiness false, and label the package `creative-draft`. Never use a placeholder to fabricate stock, eligibility, a product relationship, product performance, or consent. If those facts are absent, choose a truthful generic or notify-only treatment instead.
 

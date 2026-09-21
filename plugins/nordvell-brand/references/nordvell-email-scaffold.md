@@ -1,6 +1,6 @@
 # NORDVELL Bright Editorial Email Scaffold
 
-Use this source structure for `bright-editorial-v1`. Tokens containing `APPROVED ... COPY`, `APPROVED EYEBROW`, `APPROVED HEADLINE`, or `APPROVED CTA LABEL` are authoring instructions and must be replaced with generated, evidence-safe copy even in creative-draft mode. The `_REQUIRED` activation placeholders shown below are permitted only in creative-draft mode. Do not submit this reference verbatim or leave any placeholder in `ajo-ready` mode.
+Use this source structure for `bright-editorial-v1`. Tokens containing `APPROVED ... COPY`, `APPROVED EYEBROW`, `APPROVED HEADLINE`, or `APPROVED CTA LABEL` are authoring instructions and must be replaced with generated, evidence-safe copy even in creative-draft mode. The five `_REQUIRED` activation placeholders shown below are permitted only in creative-draft mode. Do not submit this reference verbatim or leave any placeholder in `ajo-ready` mode.
 
 Optional approved image rows and one supporting block may be inserted according to `nordvell-email-standard.md`. Preserve the module IDs, top-level order, color pairings, offer position, table layout, and mobile behavior.
 
